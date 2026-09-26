@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nursultanov Nurali</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
 </head>
+<script src="script.js"></script>
 <body>
 
 <header>
@@ -23,8 +26,21 @@
 
 <section id="about">
   <h2>About</h2>
-  <img src="photo.jpg" alt="Nursultanov Nurali">
-  <p>Manager who wants to create apps and websites.</p>
+  <div class="card">
+    <img src="photo.jpg" alt="Nursultanov Nurali" class="card__avatar">
+    <div class="card__body">
+      <h3 class="card__name">Nursultanov Nurali</h3>
+      <p class="card__bio">Manager who wants to create apps and websites. Currently learning HTML, CSS and JavaScript step by step.</p>
+      <div class="card__links flex flex-wrap gap-3">
+        <a class="card__link" href="mailto:nrsltanovnrali@gmail.com">Email</a>
+        <a class="card__link" href="https://github.com/nrsltanovnrali-byte" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <button id="likeBtn" class="like-btn rounded-full px-4 py-2" type="button" aria-pressed="false">
+        <span id="likeIcon">🤍</span>
+        <span id="likeText">Like this profile</span>
+      </button>
+    </div>
+  </div>
 </section>
 
 <section id="skills">
