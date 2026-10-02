@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0; /* margin */
+  font-family: system-ui, sans-serif;
+  color: #16211d;
+  background: #f2f0e9;
+}
+
+header {
+  padding: 2rem 1.5rem; /* padding */
+  text-align: center;
+  background: #1f6f5c;
+  color: #fff;
+}
+
+nav {
+  display: flex; /* Flexbox: пункты меню в ряд */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem; /* padding */
+  background: #16211d;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: #a8d5c8;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto; /* margin */
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem; /* margin */
+}
+
+h2 {
+  border-bottom: 2px solid #1f6f5c; /* border */
+  padding-bottom: 0.4rem; /* padding */
+}
+
+/* --- Card (About section) --- */
+.card {
+  display: flex; /* Flexbox: avatar + текст в ряд */
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #dedad0; /* border */
+  border-radius: 16px;
+  padding: 1.5rem; /* padding */
+}
+
+.card__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card__body {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card__name {
+  margin: 0;
+}
+
+.card__bio {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card__link {
+  font-size: 0.85rem;
+  color: #1f6f5c;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem; /* padding */
+  border: 1px solid #e4efec; /* border */
+  border-radius: 999px;
+}
+
+.card__link:hover {
+  background: #e4efec;
+}
+
+.like-btn {
+  align-self: flex-start;
+  border: 1px solid #dedad0;
+  background: #f2f0e9;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.like-btn.is-liked {
+  background: #1f6f5c;
+  border-color: #1f6f5c;
+  color: #fff;
+}
+
+/* --- Skills as grid --- */
+#skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid; /* Grid: сетка навыков */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+#skills li {
+  background: #fff;
+  border: 1px solid #dedad0;
+  border-radius: 8px;
+  padding: 0.6rem; /* padding */
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem; /* padding */
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 400px;
+}
+
+input, textarea {
+  padding: 0.5rem; /* padding */
+  border: 1px solid #dedad0; /* border */
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem; /* padding */
+  color: #6b7268;
+  font-size: 0.85rem;
+}
+
+/* Responsive: на мобильном card становится вертикальной */
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #skills ul {
+    grid-template-columns: 1fr;
+  }
+}
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
