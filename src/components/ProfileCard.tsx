@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import LikeButton from './LikeButton';
 
 type ProfileCardProps = {
   name: string;
@@ -9,12 +9,6 @@ type ProfileCardProps = {
 };
 
 function ProfileCard({ name, bio, avatarUrl, email, githubUrl }: ProfileCardProps) {
-  const [liked, setLiked] = useState(false);
-
-  const handleLike = () => {
-    setLiked(!liked);
-  };
-
   return (
     <section id="about">
       <h2>About</h2>
@@ -27,15 +21,7 @@ function ProfileCard({ name, bio, avatarUrl, email, githubUrl }: ProfileCardProp
             <a className="card__link" href={`mailto:${email}`}>Email</a>
             <a className="card__link" href={githubUrl} target="_blank" rel="noopener">GitHub</a>
           </div>
-          <button
-            className="like-btn rounded-full px-4 py-2"
-            type="button"
-            aria-pressed={liked}
-            onClick={handleLike}
-          >
-            <span>{liked ? '❤️' : '🤍'}</span>{' '}
-            <span>{liked ? 'Liked!' : 'Like this profile'}</span>
-          </button>
+          <LikeButton />
         </div>
       </div>
     </section>
