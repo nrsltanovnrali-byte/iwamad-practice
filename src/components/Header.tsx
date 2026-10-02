@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router';
+import { useLikes } from '../context/LikesContext';
 
 type HeaderProps = {
   name?: string;
@@ -6,10 +7,13 @@ type HeaderProps = {
 };
 
 function Header({ name = 'Nursultanov Nurali', tagline = 'Great Manager & Aspiring Web Developer' }: HeaderProps) {
+  const { likes } = useLikes();
+
   return (
     <header>
       <h1>{name}</h1>
       <p>{tagline}</p>
+      <p>♥ {likes}</p>
       <nav>
         <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
           Home
