@@ -51,16 +51,6 @@ h2 {
 }
 
 /* --- Card (About section) --- */
-.card {
-  display: flex; /* Flexbox: avatar + текст в ряд */
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  align-items: flex-start;
-  background: #fff;
-  border: 1px solid #dedad0; /* border */
-  border-radius: 16px;
-  padding: 1.5rem; /* padding */
-}
 
 .card__avatar {
   width: 90px;
@@ -178,4 +168,13 @@ footer {
 nav a.active {
   font-weight: bold;
   text-decoration: underline;
+}
+.avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 700;
+  font-size: 24px;
 }

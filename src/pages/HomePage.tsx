@@ -13,7 +13,6 @@ function HomePage() {
       <ProfileCard
         name="Nursultanov Nurali"
         bio="Manager who wants to create apps and websites. Currently learning HTML, CSS and JavaScript step by step."
-        avatarUrl="photo.jpg"
         email="nrsltanovnrali@gmail.com"
         githubUrl="https://github.com/nrsltanovnrali-byte"
       />

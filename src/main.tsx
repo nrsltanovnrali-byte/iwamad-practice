@@ -4,6 +4,11 @@ import { BrowserRouter } from 'react-router';
 import { LikesProvider } from './context/LikesContext';
 import App from './App.tsx';
 
+// Week 5 — Design System
+import './styles/tokens.css';
+import './index.css';
+import './styles/ui.css';
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
