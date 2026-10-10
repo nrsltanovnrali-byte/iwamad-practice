@@ -39,6 +39,10 @@ function Header({
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
             Contact
           </NavLink>
+
+          <NavLink to="/register" className={({ isActive }) => isActive ? 'active' : ''}>
+            Register
+          </NavLink>
         </nav>
       </div>
     </header>
