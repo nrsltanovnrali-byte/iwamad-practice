@@ -1,0 +1,46 @@
+export type RegistrationValues = {
+  fullName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+  acceptTerms: boolean;
+};
+
+export type RegistrationErrors = Partial<
+  Record<keyof RegistrationValues, string>
+>;
+
+export function validateRegistration(
+  values: RegistrationValues
+): RegistrationErrors {
+  const errors: RegistrationErrors = {};
+
+  // Full Name validation
+  if (values.fullName.trim().length < 2) {
+    errors.fullName = 'Enter your full name';
+  }
+
+  // Email validation
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+    errors.email = 'Enter a valid email, like name@example.com';
+  }
+
+  // Password validation
+  if (values.password.length < 8) {
+    errors.password = 'Use at least 8 characters';
+  } else if (!/\d/.test(values.password)) {
+    errors.password = 'Include at least one number';
+  }
+
+  // Confirm Password validation
+  if (values.confirmPassword !== values.password) {
+    errors.confirmPassword = 'Passwords do not match';
+  }
+
+  // Terms validation
+  if (!values.acceptTerms) {
+    errors.acceptTerms = 'Accept the terms to continue';
+  }
+
+  return errors;
+}

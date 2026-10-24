@@ -1,0 +1,84 @@
+
+.ui-button {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  font: inherit;
+}
+
+.ui-button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.ui-button--secondary {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.ui-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.ui-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.ui-button:focus-visible,
+.ui-card:focus-visible,
+.ui-tag:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin: 0;
+}
+
+@media (max-width: 639px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+}
+
+/* Events grid */
+.card-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.card-grid h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.card-grid .card,
+.card-grid .ui-card {
+  max-width: none;
+}
