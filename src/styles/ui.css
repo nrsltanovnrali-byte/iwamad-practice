@@ -1,3 +1,4 @@
+
 .ui-button {
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-md);
@@ -43,6 +44,7 @@
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +56,7 @@
 .skills-list li {
   margin: 0;
 }
+
 @media (max-width: 639px) {
   header nav {
     display: flex;
@@ -61,4 +64,21 @@
     align-items: center;
     gap: var(--space-2);
   }
+}
+
+/* Events grid */
+.card-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.card-grid h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.card-grid .card,
+.card-grid .ui-card {
+  max-width: none;
 }
